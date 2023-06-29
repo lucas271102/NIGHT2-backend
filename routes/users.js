@@ -1,6 +1,10 @@
 //var express = require('express');
 import express from 'express'
 const router = express.Router();
+import accountExistsSignIn from '../middlewares/accountExistsSignIn.js';
+import signin from '../controllers/users/signin.js'
+import validator from '../middlewares/validator.js';
+import passport from '../middlewares/passport.js'
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
