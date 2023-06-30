@@ -5,7 +5,7 @@ let schema = new mongoose.Schema(
         password:{type:String, required:true},
         profilePicture:{type:String, required:true},
         is_online:{type:Boolean, required:true},
-        is_verified:{type:Boolean, required:true},
+        is_verified:{type:Boolean, required:false},
         verify_code:{type:String, required:true},
 
         

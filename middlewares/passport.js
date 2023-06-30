@@ -3,8 +3,8 @@ import passportJwt from 'passport-jwt'
 import User from "../models/User.js";
 passport.use(
     new passportJwt.Strategy({
+        secretOrKey: process.env.TOKEN,
         jwtFromRequest:passportJwt.ExtractJwt.fromAuthHeaderAsBearerToken(),
-        secretOrKey: process.env
     },
     async (jwt_payload, done)=>{
         try {

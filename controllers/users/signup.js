@@ -13,8 +13,10 @@ let signup = async (req, res, next)=>{
             success:true,
             message:'user registered',
             data:req.body
+            
         })
     } catch (error) {
+        
         next(error )
     }
 }

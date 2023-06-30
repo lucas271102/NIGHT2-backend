@@ -5,7 +5,7 @@ import accountExistsSignIn from '../middlewares/accountExistsSignIn.js';
 import signin from '../controllers/users/signin.js'
 import signup from '../controllers/users/signup.js'
 import validator from '../middlewares/validator.js';
-import passport from '../middlewares/passport.js'
+
 import passwordIsOk from '../middlewares/passwordIsOk.js';
 import { userCreateSignIn, userCreateSignUp } from '../schemas/users.js';
 import accountSignUp from '../middlewares/accountSignUp.js';
@@ -17,6 +17,6 @@ router.get('./admins',(req, res, next)=>res.status(200).json({
   success:true,
   admins:[]
 }))
-router.post('/signup', validator(userCreateSignUp), accountSignUp, signup)
+router.post('/signup', accountSignUp, signup)
 router.post('/signin', validator(userCreateSignIn), accountExistsSignIn,passwordIsOk, signin)
 export default router;
