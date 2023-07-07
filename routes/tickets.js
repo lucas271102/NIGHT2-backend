@@ -1,11 +1,6 @@
 import express from "express";
-import get_ticekts from "../controllers/tickets/get_tickets";
+import get_tickets from "../controllers/tickets/get_tickets.js";
 const router = express.Router();
-router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
-  });
-  router.get('./admins',(req, res, next)=>res.status(200).json({
-    success:true,
-    admins:[]
-  }))
-  router.get('/', get_ticekts)
+
+  router.get('/', get_tickets)
+  export default router 

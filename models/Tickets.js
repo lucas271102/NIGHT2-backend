@@ -10,5 +10,5 @@ let schema = new Schema(
     }
 )
 let collection ='tickets'
-let Ticket = model(collection, schema)
-export default Ticket 
+let Tickets = model(collection, schema)
+export default Tickets
