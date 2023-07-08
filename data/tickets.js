@@ -3,4 +3,29 @@ export let tickets = [{
     price:5000,
     photo:'https://cdn.getcrowder.com/images/1636661849289-1633476622692-BRESH-Tickets-1.jpg',
     category_id:'Festival'
-}]
+},
+{
+    name:'Moscu',
+    price:4500,
+    photo:'data:image/png;base64,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',
+    category_id:'Festival'
+},
+{
+    name:'Jet',
+    price:5000,
+    photo:'https://pbs.twimg.com/profile_images/456800906701320193/FmSKc8D3_400x400.jpeg',
+    category_id:'Festival'
+},
+{
+    name:'Bayside',
+    price:2000,
+    photo:'https://www.passline.com/imagenes/eventos/heart-costanera-viernes-0707-img.jpg',
+    category_id:'Festival'
+},{
+    name:'Museum',
+    price:3000,
+    photo:'https://pbs.twimg.com/profile_images/695374803746750464/bonCJm_v_400x400.jpg',
+    category_id:'Festival'
+}
+
+]
