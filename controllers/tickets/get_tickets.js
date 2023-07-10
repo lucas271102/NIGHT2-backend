@@ -3,7 +3,7 @@ let get_ticekts = async(req, res, next)=>{
     let queries  ={}
     let sort= {}
     let pagination = {
-        limit:6,
+        limit:12,
         page:1
     }
     if(req.query.name){
