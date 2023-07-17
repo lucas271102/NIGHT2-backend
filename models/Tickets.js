@@ -5,6 +5,8 @@ let schema = new Schema(
         price:{type:Number, required:true},
         photo:{type:String, required: true},
         category_id:{type: String, required:true},
+        stock_avalaible:{type:Number,required: true},
+        
     },{
         timestamps:true
     }
