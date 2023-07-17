@@ -48,13 +48,21 @@ const addToCart= async (req, res)=>{
                             message:"Ticket updated successfully",
                             update: update
                         })
+                    }else {
+                        return res.status(404).json({
+                            success: false,
+                            message: "Ticket out of stock"
+                        })
                     }
                 }
             }
         }
 
     } catch (error) {
-        
+        console.log(error)
+        res.status(500).json({
+            messsage:"Something went wrong"
+        })
     }
 }
 
