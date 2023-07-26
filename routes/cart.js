@@ -6,6 +6,6 @@ import viewCart from '../controllers/cart/view.js'
   
 
 router.post('/createcart', createCart)
-router.get('cart/', viewCart)
+router.get('/cart', viewCart)
 router.delete('/', deleteOne) 
 export default router
