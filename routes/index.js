@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import userRouter from './users.js'
 import ticketRouter from './tickets.js'
+import cartRouter from './cart.js'
 var router = Router();
 
 
@@ -10,6 +11,7 @@ router.get('/', function(req, res, next) {
 });
 router.use('/users', userRouter)
 router.use('/tickets', ticketRouter)
+router.use('/cart', cartRouter)
 export default router;
 
 
