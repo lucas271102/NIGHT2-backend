@@ -2,7 +2,8 @@ import Cart from "../../models/Cart.js";
 const view = async(req, res)=>{
 
     try {
-        const carts = await Cart.find("-_id ticket_id quantity").populate("ticket_id")
+    
+        const carts = await Cart.find()
         if  ( carts ){
             res.status(200).json({
                 success:true,
