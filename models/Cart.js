@@ -1,6 +1,7 @@
 import { Schema, model, Types  } from "mongoose";
 let schema = new Schema ({
-    name:{type:String, required:false},
+    name:{type:String, required:true},
+    price:{type:Number, required:true},
     ticket_id:{type:Types.ObjectId, ref:'tickets', required:true},
     quantity:{type:Number, required:false}
 
