@@ -2,7 +2,7 @@ import Tickets from '../../models/Tickets.js'
 import Cart from '../../models/Cart.js'
 const addToCart= async (req, res)=>{
     try {
-        const {ticketId} = req.body;
+        const {ticketId, name, price} = req.body;
         
         let ticket = await Tickets.findOne({_id: ticketId})
         if (ticket){
@@ -10,19 +10,24 @@ const addToCart= async (req, res)=>{
             if(!cart){
                 const data  = {
                     ticket_id: ticketId,
+                    name:name,
+                    price:price,
                     quantity: 1
                 }
                 let one = await Cart.create(data)
                 one = await one.populate('ticket_id')
                 const oneFilter={
                     ticket_id:one.ticket_id,
+                    name:one.name,
+                    price:one.name,
                     quantity:one.quantity
+
                 }
                 if(one){
                     return res.status(201).json({
                         one: oneFilter,
                         message:"Ticket added to cart.",
-                        timestamps: one.createdAt.getUTCDate()
+                        timestamps: one.createdAt
                     })
 
                 }else{
