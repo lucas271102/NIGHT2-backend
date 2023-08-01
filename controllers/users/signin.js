@@ -15,7 +15,8 @@ let signin = async(req, res, next)=>{
         )
         const user ={
             email :req.user.email,
-            profilePicture:req.user.profilePicture,
+            name:req.user.name,
+            surname:req.user.surname
         }
         user.password=null
         return res.status(200).json({

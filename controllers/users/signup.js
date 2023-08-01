@@ -3,7 +3,8 @@ import crypto from 'crypto'
 import bcryptjs  from 'bcryptjs'
 let signup = async (req, res, next)=>{
     req.body.email
-    req.body.profilePicture
+    req.body.name
+    req.body.surname
     req.body.is_online= false 
     req.body.verify_code= crypto.randomBytes(10).toString('hex')
     req.body.password= bcryptjs.hashSync(req.body.password, 10)

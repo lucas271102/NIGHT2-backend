@@ -6,7 +6,8 @@ if(user){
     req.user={
         id:user._id,
         email:user.email,
-        profilePicture:user.profilePicture,
+         name:user.name,
+         surname: user.surname,
         password:user.password,
         is_verified:user.is_verified
     }
